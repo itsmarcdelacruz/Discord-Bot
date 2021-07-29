@@ -1,12 +1,13 @@
 import discord
-import random
 
-TOKEN = 'Nzc0MDM4NDEyMjg1MzEzMDk1.X6R9cg.rXDgU5bsxlWsqTjBm_D7l6bRlu8'
+TOKEN = 'ODY5ODE2MjIxNDkzNzU1OTM1.YQDtew.Fp9euV4UNDGJbbRRFRRl-EEV9xI'
 
-client = discord.Client()
+class MyClient(discord.Client):
+    async def on_ready(self):
+        print('Logged on as {0}!'.format(self.user))
 
-@client.event
-async def on_ready();
-    print('We have logged in as {0.user]'.format(client))
+    async def on_message(self, message):
+        print('Message from {0.author}: {0.content}'.format(message))
 
+client = MyClient()
 client.run(TOKEN)
