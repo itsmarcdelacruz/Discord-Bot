@@ -38,8 +38,8 @@ class Misc(commands.Cog):
 
     @commands.command()
     async def createInvite(self, ctx):
-        inviteLink = await ctx.channel.create_invite(max_age = 300)
-        link = ctx.inviteLink.url()
+        inviteLink = await ctx.channel.create_invite(max_age = 300, max_uses = 0, reason = None,)
+        link = inviteLink.url()
         await ctx.send("Here is the instant invite link to your server: " + link)
 
 def setup(client):
