@@ -28,8 +28,9 @@ class Moderation(commands.Cog):
                 await ctx.send(f'User {member} has been unbanned.')
                 return
 
-    # @commands.command()
-    # async def mute(self, ctx, *, member):
+    @commands.command()
+    @commands.has_role()
+    async def mute(self, ctx, *, member):
         
 
 def setup(client):
