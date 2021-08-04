@@ -31,6 +31,7 @@ class Moderation(commands.Cog):
     @commands.command()
     @commands.has_role()
     async def mute(self, ctx, *, member):
+        await ctx.channel.mute()
         
 
 def setup(client):
