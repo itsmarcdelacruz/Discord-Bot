@@ -3,7 +3,7 @@ import random
 import os
 from discord.ext import commands
 
-TOKEN = 'ODY5ODE2MjIxNDkzNzU1OTM1.YQDtew.Fp9euV4UNDGJbbRRFRRl-EEV9xI'
+TOKEN = ''
 
 intents = discord.Intents(messages = True, guilds = True, reactions = True, members = True, presences = True)
 client = commands.Bot(command_prefix = '?', intents = intents)
